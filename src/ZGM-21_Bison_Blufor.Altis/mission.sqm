@@ -971,7 +971,7 @@ class Mission
 					azimut=67.676697;
 					id=26;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="OPTRE_Spartan2_Soldier_TeamLeader";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
@@ -985,7 +985,7 @@ class Mission
 					azimut=67.676498;
 					id=27;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="OPTRE_Spartan2_Soldier_Corpsman";
 					player="PLAY CDG";
 					skill=0.60000002;
 					description="Rifleman (AT)";
@@ -996,7 +996,7 @@ class Mission
 					azimut=67.676498;
 					id=28;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="OPTRE_Spartan2_Soldier_Engineer";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -1008,7 +1008,7 @@ class Mission
 					azimut=67.676498;
 					id=29;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="OPTRE_Spartan2_Soldier_Scout";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setUnitTrait [""medic"", true];";
@@ -1028,7 +1028,7 @@ class Mission
 					azimut=67.676697;
 					id=30;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="OPTRE_FC_Elite_Major";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
@@ -1042,7 +1042,7 @@ class Mission
 					azimut=67.676498;
 					id=31;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="OPTRE_FC_Elite_Minor";
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
@@ -1054,7 +1054,7 @@ class Mission
 					azimut=67.676498;
 					id=32;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="OPTRE_FC_Elite_Minor";
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setUnitTrait [""medic"", true];";
@@ -1066,7 +1066,7 @@ class Mission
 					azimut=67.676498;
 					id=33;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="OPTRE_FC_Elite_Minor";
 					player="PLAY CDG";
 					skill=0.60000002;
 					description="Rifleman (AT)";
