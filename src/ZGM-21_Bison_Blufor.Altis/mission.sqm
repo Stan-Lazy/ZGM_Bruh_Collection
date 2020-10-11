@@ -977,7 +977,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60000002;
 					init="this setUnitTrait [""engineer"", true];this setUnitTrait [""medic"", true];";
-					description="Team Leader";
+					description="Spartan Team Leader";
 				};
 				class Item1
 				{
@@ -988,7 +988,7 @@ class Mission
 					vehicle="OPTRE_Spartan2_Soldier_Corpsman";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Rifleman (AT)";
+					description="Spartan Corpsman";
 				};
 				class Item2
 				{
@@ -1000,7 +1000,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					description="Autorifleman";
+					description="Spartan Engineer";
 				};
 				class Item3
 				{
@@ -1012,7 +1012,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setUnitTrait [""medic"", true];";
-					description="Combat Life Saver";
+					description="Spartan Scout";
 				};
 			};
 		};
@@ -1034,7 +1034,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60000002;
 					init="this setUnitTrait [""engineer"", true];this setUnitTrait [""medic"", true];";
-					description="Team Leader";
+					description="Sangheili Major";
 				};
 				class Item1
 				{
@@ -1046,7 +1046,7 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					description="Autorifleman";
+					description="Sangheili Minor";
 				};
 				class Item2
 				{
@@ -1058,7 +1058,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					init="this setUnitTrait [""medic"", true];";
-					description="Combat Life Saver";
+					description="Sangheili Minor";
 				};
 				class Item3
 				{
@@ -1069,7 +1069,7 @@ class Mission
 					vehicle="OPTRE_FC_Elite_Minor";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Rifleman (AT)";
+					description="Sangheili Minor";
 				};
 			};
 		};
