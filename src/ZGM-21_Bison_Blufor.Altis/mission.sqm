@@ -12,13 +12,15 @@ class Mission
 		"a3_missions_f_curator",
 		"A3_Modules_F_Curator_Misc",
 		"A3_Characters_F",
-		"a3_map_altis"
+		"a3_map_altis",
+		"ryanzombiesfunctions"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F",
 		"A3_Modules_F_Curator_Curator",
 		"A3_Modules_F_Intel",
+		"ryanzombiesfunctions",
 		"A3_Data_F_Curator_Virtual",
 		"A3_Missions_F_Curator",
 		"a3_map_altis"
@@ -26,7 +28,7 @@ class Mission
 	randomSeed=6210253;
 	class Intel
 	{
-		briefingName="Zeus 20+1 Zeus Enhanced Altis (BLUFOR)";
+		briefingName="Zeus 20+1 Bison Altis (BLUFOR)";
 		resistanceWest=0;
 		startWeather=0.35999998;
 		startWind=0.099999994;
@@ -45,7 +47,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=17;
+		items=18;
 		class Item0
 		{
 			side="WEST";
@@ -63,8 +65,8 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					description="Team Leader";
 					init="this setUnitTrait [""engineer"", true];this setUnitTrait [""medic"", true];";
+					description="Team Leader";
 				};
 				class Item1
 				{
@@ -98,8 +100,8 @@ class Mission
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Combat Life Saver";
 					init="this setUnitTrait [""medic"", true];";
+					description="Combat Life Saver";
 				};
 			};
 		};
@@ -158,7 +160,7 @@ class Mission
 			side="LOGIC";
 			class Vehicles
 			{
-				items=1;
+				items=2;
 				class Item0
 				{
 					position[]={428.13712,0.05201339,392.81567};
@@ -200,6 +202,79 @@ class Mission
 					syncId=1;
 					synchronizations[]={1};
 				};
+				class Item1
+				{
+					position[]={262.90698,-0.00095796777,455.92529};
+					class args
+					{
+						items=10;
+						class Item0
+						{
+							value="1.2";
+							parentCls="RyanZM_ModuleCustomDifficulty";
+							typeName="AttackSpeed";
+						};
+						class Item1
+						{
+							value="2.35";
+							parentCls="RyanZM_ModuleCustomDifficulty";
+							typeName="AttackDistance";
+						};
+						class Item2
+						{
+							value="0.15";
+							parentCls="RyanZM_ModuleCustomDifficulty";
+							typeName="Damage";
+						};
+						class Item3
+						{
+							value="0.02";
+							parentCls="RyanZM_ModuleCustomDifficulty";
+							typeName="DamageCar";
+						};
+						class Item4
+						{
+							value="0.01";
+							parentCls="RyanZM_ModuleCustomDifficulty";
+							typeName="DamageAir";
+						};
+						class Item5
+						{
+							value="0.002";
+							parentCls="RyanZM_ModuleCustomDifficulty";
+							typeName="DamageTank";
+						};
+						class Item6
+						{
+							value="2";
+							parentCls="RyanZM_ModuleCustomDifficulty";
+							typeName="Knockback";
+						};
+						class Item7
+						{
+							value="1.5";
+							parentCls="RyanZM_ModuleCustomDifficulty";
+							typeName="KnockbackCar";
+						};
+						class Item8
+						{
+							value="1";
+							parentCls="RyanZM_ModuleCustomDifficulty";
+							typeName="KnockbackAir";
+						};
+						class Item9
+						{
+							value="0.4";
+							parentCls="RyanZM_ModuleCustomDifficulty";
+							typeName="KnockbackTank";
+						};
+					};
+					id=6;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleCustomDifficulty";
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
 			};
 		};
 		class Item3
@@ -207,7 +282,7 @@ class Mission
 			side="LOGIC";
 			class Vehicles
 			{
-				items=1;
+				items=2;
 				class Item0
 				{
 					position[]={476.62155,-0.37764454,391.85864};
@@ -240,10 +315,59 @@ class Mission
 							typeName="Identity";
 						};
 					};
-					id=6;
+					id=7;
 					side="LOGIC";
 					vehicle="ModuleHQ_F";
 					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+				class Item1
+				{
+					position[]={262.59525,-0.0019019314,428.48877};
+					class args
+					{
+						items=6;
+						class Item0
+						{
+							value="0";
+							parentCls="RyanZM_ModuleInfected";
+							typeName="InfectedChance";
+						};
+						class Item1
+						{
+							value="0.1";
+							parentCls="RyanZM_ModuleInfected";
+							typeName="InfectedRate";
+						};
+						class Item2
+						{
+							value="[]";
+							parentCls="RyanZM_ModuleInfected";
+							typeName="Immunity";
+						};
+						class Item3
+						{
+							value="1";
+							parentCls="RyanZM_ModuleInfected";
+							typeName="InfectedSymptoms";
+						};
+						class Item4
+						{
+							value="1";
+							parentCls="RyanZM_ModuleInfected";
+							typeName="InfectedDeath";
+						};
+						class Item5
+						{
+							value="300";
+							parentCls="RyanZM_ModuleInfected";
+							typeName="Antivirus";
+						};
+					};
+					id=8;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleInfected";
 					lock="UNLOCKED";
 					skill=0.60000002;
 				};
@@ -287,7 +411,7 @@ class Mission
 							typeName="Identity";
 						};
 					};
-					id=7;
+					id=9;
 					side="LOGIC";
 					vehicle="ModuleHQ_F";
 					leader=1;
@@ -306,7 +430,7 @@ class Mission
 				{
 					position[]={529.99829,-0.056396905,492.56958};
 					azimut=0.1;
-					id=8;
+					id=10;
 					side="LOGIC";
 					vehicle="VirtualCurator_F";
 					player="PLAYER COMMANDER";
@@ -349,7 +473,7 @@ class Mission
 							typeName="Type";
 						};
 					};
-					id=9;
+					id=11;
 					side="LOGIC";
 					vehicle="ModuleCuratorAddEditingAreaPlayers_F";
 					leader=1;
@@ -422,7 +546,7 @@ class Mission
 							typeName="RespawnPosition";
 						};
 					};
-					id=10;
+					id=12;
 					side="LOGIC";
 					vehicle="ModuleCuratorSetAttributesGroup_F";
 					leader=1;
@@ -465,7 +589,7 @@ class Mission
 							typeName="MarkerColor";
 						};
 					};
-					id=11;
+					id=13;
 					side="LOGIC";
 					vehicle="ModuleCuratorSetAttributesMarker_F";
 					leader=1;
@@ -550,7 +674,7 @@ class Mission
 							typeName="Exec";
 						};
 					};
-					id=12;
+					id=14;
 					side="LOGIC";
 					vehicle="ModuleCuratorSetAttributesObject_F";
 					leader=1;
@@ -635,7 +759,7 @@ class Mission
 							typeName="Exec";
 						};
 					};
-					id=13;
+					id=15;
 					side="LOGIC";
 					vehicle="ModuleCuratorSetAttributesPlayer_F";
 					leader=1;
@@ -690,7 +814,7 @@ class Mission
 							typeName="SpeedMode";
 						};
 					};
-					id=14;
+					id=16;
 					side="LOGIC";
 					vehicle="ModuleCuratorSetAttributesWaypoint_F";
 					leader=1;
@@ -710,7 +834,7 @@ class Mission
 				class Item0
 				{
 					position[]={430.42325,0.24803323,593.74414};
-					id=15;
+					id=17;
 					side="LOGIC";
 					vehicle="ModuleMPTypeGameMaster_F";
 					leader=1;
@@ -731,21 +855,21 @@ class Mission
 				{
 					position[]={592.24078,-0.019058377,570.22498};
 					azimut=67.676697;
-					id=16;
+					id=18;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					description="Team Leader";
 					init="this setUnitTrait [""engineer"", true];this setUnitTrait [""medic"", true];";
+					description="Team Leader";
 				};
 				class Item1
 				{
 					position[]={588.80896,0.2471453,556.10876};
 					azimut=67.676498;
-					id=17;
+					id=19;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
@@ -756,7 +880,7 @@ class Mission
 				{
 					position[]={590.69171,0.20076334,563.38525};
 					azimut=67.676498;
-					id=18;
+					id=20;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
@@ -768,13 +892,13 @@ class Mission
 				{
 					position[]={582.87262,0.15424722,573.67029};
 					azimut=67.676498;
-					id=19;
+					id=21;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Combat Life Saver";
 					init="this setUnitTrait [""medic"", true];";
+					description="Combat Life Saver";
 				};
 			};
 		};
@@ -788,21 +912,21 @@ class Mission
 				{
 					position[]={572.74274,0.10212186,564.68604};
 					azimut=67.676697;
-					id=20;
+					id=22;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					description="Team Leader";
 					init="this setUnitTrait [""engineer"", true];this setUnitTrait [""medic"", true];";
+					description="Team Leader";
 				};
 				class Item1
 				{
 					position[]={565.49146,0.22782041,553.07654};
 					azimut=67.676498;
-					id=21;
+					id=23;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
@@ -813,7 +937,7 @@ class Mission
 				{
 					position[]={569.40332,-0.017145768,558.91931};
 					azimut=67.676498;
-					id=22;
+					id=24;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
@@ -825,13 +949,13 @@ class Mission
 				{
 					position[]={563.37457,-0.0018019378,568.13135};
 					azimut=67.676498;
-					id=23;
+					id=25;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Combat Life Saver";
 					init="this setUnitTrait [""medic"", true];";
+					description="Combat Life Saver";
 				};
 			};
 		};
@@ -845,21 +969,21 @@ class Mission
 				{
 					position[]={550.14294,0.34462482,562.02917};
 					azimut=67.676697;
-					id=24;
+					id=26;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					description="Team Leader";
 					init="this setUnitTrait [""engineer"", true];this setUnitTrait [""medic"", true];";
+					description="Team Leader";
 				};
 				class Item1
 				{
 					position[]={540.86267,0.12207735,546.36389};
 					azimut=67.676498;
-					id=25;
+					id=27;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
@@ -870,7 +994,7 @@ class Mission
 				{
 					position[]={545.84863,0.1200588,555.9054};
 					azimut=67.676498;
-					id=26;
+					id=28;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
@@ -882,13 +1006,13 @@ class Mission
 				{
 					position[]={540.77478,0.26459435,565.47449};
 					azimut=67.676498;
-					id=27;
+					id=29;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Combat Life Saver";
 					init="this setUnitTrait [""medic"", true];";
+					description="Combat Life Saver";
 				};
 			};
 		};
@@ -902,21 +1026,21 @@ class Mission
 				{
 					position[]={641.69586,0.18997988,578.98474};
 					azimut=67.676697;
-					id=28;
+					id=30;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					description="Team Leader";
 					init="this setUnitTrait [""engineer"", true];this setUnitTrait [""medic"", true];";
+					description="Team Leader";
 				};
 				class Item1
 				{
 					position[]={640.26605,-0.02040297,569.75549};
 					azimut=67.676498;
-					id=29;
+					id=31;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
@@ -928,24 +1052,265 @@ class Mission
 				{
 					position[]={632.3277,0.18046193,582.43005};
 					azimut=67.676498;
-					id=30;
+					id=32;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.60000002;
-					description="Combat Life Saver";
 					init="this setUnitTrait [""medic"", true];";
+					description="Combat Life Saver";
 				};
 				class Item3
 				{
 					position[]={638.50262,-0.16818614,559.97595};
 					azimut=67.676498;
-					id=31;
+					id=33;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					skill=0.60000002;
 					description="Rifleman (AT)";
+				};
+			};
+		};
+		class Item17
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={262.59521,-185.97,482.10938};
+					class args
+					{
+						items=2;
+						class Item0
+						{
+							value="3";
+							parentCls="RyanZM_ModuleZombieHealth";
+							typeName="ZombieMaxHealth";
+						};
+						class Item1
+						{
+							value="1";
+							parentCls="RyanZM_ModuleZombieHealth";
+							typeName="DemonMaxHealth";
+						};
+					};
+					id=34;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleZombieHealth";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+				class Item1
+				{
+					position[]={262.90695,-185.97,509.85168};
+					class args
+					{
+						items=3;
+						class Item0
+						{
+							value="2";
+							parentCls="RyanZM_ModuleInfection";
+							typeName="Infection";
+						};
+						class Item1
+						{
+							value="30";
+							parentCls="RyanZM_ModuleInfection";
+							typeName="InfectionTimer";
+						};
+						class Item2
+						{
+							value="1";
+							parentCls="RyanZM_ModuleInfection";
+							typeName="Uniform";
+						};
+					};
+					id=35;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleInfection";
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+				class Item2
+				{
+					position[]={262.90695,-185.97,534.79065};
+					class args
+					{
+						items=13;
+						class Item0
+						{
+							value="1";
+							parentCls="RyanZM_ModuleAbilities";
+							typeName="Roaming";
+						};
+						class Item1
+						{
+							value="2";
+							parentCls="RyanZM_ModuleAbilities";
+							typeName="Feeding";
+						};
+						class Item2
+						{
+							value="1";
+							parentCls="RyanZM_ModuleAbilities";
+							typeName="Jumping";
+						};
+						class Item3
+						{
+							value="1";
+							parentCls="RyanZM_ModuleAbilities";
+							typeName="JumpingDemons";
+						};
+						class Item4
+						{
+							value="4";
+							parentCls="RyanZM_ModuleAbilities";
+							typeName="Throwing";
+						};
+						class Item5
+						{
+							value="3";
+							parentCls="RyanZM_ModuleAbilities";
+							typeName="ThrowingDemons";
+						};
+						class Item6
+						{
+							value="1";
+							parentCls="RyanZM_ModuleAbilities";
+							typeName="ThrowingCarAlarms";
+						};
+						class Item7
+						{
+							value="500";
+							parentCls="RyanZM_ModuleAbilities";
+							typeName="ThrowingDistance";
+						};
+						class Item8
+						{
+							value="1000";
+							parentCls="RyanZM_ModuleAbilities";
+							typeName="ThrowingDistanceDemons";
+						};
+						class Item9
+						{
+							value="5";
+							parentCls="RyanZM_ModuleAbilities";
+							typeName="ThrowingTank";
+						};
+						class Item10
+						{
+							value="4";
+							parentCls="RyanZM_ModuleAbilities";
+							typeName="ThrowingTankDemons";
+						};
+						class Item11
+						{
+							value="50";
+							parentCls="RyanZM_ModuleAbilities";
+							typeName="ThrowingTankDistance";
+						};
+						class Item12
+						{
+							value="100";
+							parentCls="RyanZM_ModuleAbilities";
+							typeName="ThrowingTankDistanceDemons";
+						};
+					};
+					id=36;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleAbilities";
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+				class Item3
+				{
+					position[]={263.21866,-185.97,558.48083};
+					class args
+					{
+						items=12;
+						class Item0
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSettings";
+							typeName="CivilianAttacks";
+						};
+						class Item1
+						{
+							value="1";
+							parentCls="RyanZM_ModuleSettings";
+							typeName="DeleteBodies";
+						};
+						class Item2
+						{
+							value="5000";
+							parentCls="RyanZM_ModuleSettings";
+							typeName="DetectionDistance";
+						};
+						class Item3
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSettings";
+							typeName="ExplodingHeads";
+						};
+						class Item4
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSettings";
+							typeName="GlowingEyes";
+						};
+						class Item5
+						{
+							value="1";
+							parentCls="RyanZM_ModuleSettings";
+							typeName="Headshots";
+						};
+						class Item6
+						{
+							value="1";
+							parentCls="RyanZM_ModuleSettings";
+							typeName="Bleeding";
+						};
+						class Item7
+						{
+							value="1";
+							parentCls="RyanZM_ModuleSettings";
+							typeName="Invincibility";
+						};
+						class Item8
+						{
+							value="1";
+							parentCls="RyanZM_ModuleSettings";
+							typeName="Sounds";
+						};
+						class Item9
+						{
+							value="1";
+							parentCls="RyanZM_ModuleSettings";
+							typeName="JumpingSounds";
+						};
+						class Item10
+						{
+							value="2";
+							parentCls="RyanZM_ModuleSettings";
+							typeName="StartingAnim";
+						};
+						class Item11
+						{
+							value="1";
+							parentCls="RyanZM_ModuleSettings";
+							typeName="ZombieScript";
+						};
+					};
+					id=37;
+					side="LOGIC";
+					vehicle="RyanZM_ModuleSettings";
+					lock="UNLOCKED";
+					skill=0.60000002;
 				};
 			};
 		};
